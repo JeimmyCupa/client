@@ -86,7 +86,9 @@ public class MenuPanel extends JPanel {
         buttonToApply.setBackground(WindowMain.colorFirst);
         buttonToApply.addActionListener(listener);
     }
-    //Metodos para obtener los objetos de la Clase MouseAdapter
+    /**
+     *  Metodos para obtener los objetos de la Clase MouseAdapter
+     */
     public MouseAdapter mouseEntered() {
         return new MouseAdapter() {
             @Override

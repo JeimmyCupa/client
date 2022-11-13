@@ -7,6 +7,10 @@ import java.util.ArrayList;
 public class BooksPanel extends JPanel {
     private ArrayList<Item> items;
 
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
     public BooksPanel() {
         items = new ArrayList<>();
         GridLayout layout = new GridLayout();//Se crea un layout de tipo Grid para la vista de matriz
@@ -48,6 +52,9 @@ public class BooksPanel extends JPanel {
         BooksPanel booksPanel = new BooksPanel();
         JScrollPane scrollPane = new JScrollPane(booksPanel);//Este es el scroll que se agrega al panel, se debe añadir desde la ventana principal
         frame.add(scrollPane);
+
+        DialogBook dialogBook = new DialogBook(frame, true, booksPanel.getItems().get(0));//Se crea el dialogo para ver el libro
+        dialogBook.setVisible(true);
 
         frame.setVisible(true);
     }

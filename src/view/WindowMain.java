@@ -65,7 +65,7 @@ public class WindowMain extends JFrame {
 		btnExit.setBackground(colorWhite);
 		btnExit.setBounds(1150,0,43,43);
 		btnExit.setBorderPainted(false);
-		btnExit.setMargin(new Insets(1, 1, 1, 1));;
+		btnExit.setMargin(new Insets(1, 1, 1, 1));
 		btnExit.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnExit.addActionListener(listener);
 		btnExit.setActionCommand("EXIT");

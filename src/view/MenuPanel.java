@@ -79,7 +79,7 @@ public class MenuPanel extends JPanel {
 		btnMyBooks.setBounds(0, 247, 285, 53);
 		btnMyBooks.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnMyBooks.addActionListener(listener);
-		btnMyBooks.setActionCommand("SEARCHBOOKS");
+		btnMyBooks.setActionCommand("MYBOOKS");
 		btnMyBooks.addMouseListener(this.mouseEntered());
 		btnMyBooks.addMouseListener(this.mouseExited());
 		add(btnMyBooks);
@@ -97,7 +97,7 @@ public class MenuPanel extends JPanel {
 		btnSingOut.setBounds(0, 302, 285, 53);
 		btnSingOut.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnSingOut.addActionListener(listener);
-		btnSingOut.setActionCommand("SEARCHBOOKS");
+		btnSingOut.setActionCommand("SINGOUT");
 		btnSingOut.addMouseListener(this.mouseEntered());
 		btnSingOut.addMouseListener(this.mouseExited());
 		add(btnSingOut);

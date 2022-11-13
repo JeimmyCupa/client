@@ -21,6 +21,9 @@ public class ClientController implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		String event = e.getActionCommand();
 		switch(event) {
+		case "LOGIN":
+			System.out.println("Click login");
+			break;
 		case "EXIT":
 			window.dispose();
 			break;

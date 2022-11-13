@@ -38,9 +38,6 @@ public class BooksPanel extends JPanel {
         }
     }
 
-    private void initComponent() {
-
-    }
 
     //Metodo main para probar la vista, es temporal y se puede borrar
     public static void main(String[] args) {

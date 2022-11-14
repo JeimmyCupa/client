@@ -1,9 +1,7 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -25,10 +23,11 @@ public class WindowMain extends JFrame {
 	public final static Color colorLight = new Color(230,230,230);
 	public final static Color colorWhite = new Color(255,255,255);
 	private JPanel contentPane;//Panel principal de la ventana
-	private JPanel contentData,header,menuPanel,dataPanel;
+	private JPanel contentData,header,menuPanel,dataPanel;//Paneles para dividir el contenido en la ventana
 	private JButton btnExit;
 	
 	private LoginPanel loginPanel;
+	private RegisterPanel registerPanel;
 	private MenuPanel menu;
 	private SearchBookPanel searchBookPanel;
 	private ActionListener listener;
@@ -48,8 +47,7 @@ public class WindowMain extends JFrame {
 		setContentPane(contentPane);
 		this.listener = listener;
 		initComponents();
-		//initLoginPanel();
-		initComponentsUser();
+		initLoginPanel();
 	}
 	//Metodo para inciar componentes generales de la GUI(Cabecera y un panel para el contenido en contentPane)
 	public void initComponents() {
@@ -65,8 +63,8 @@ public class WindowMain extends JFrame {
 		btnExit.setText("X");
 		btnExit.setFont(new Font("Segoe UI", Font.PLAIN, 30));
 		btnExit.setForeground(colorFirst);
-		btnExit.setBackground(colorWhite);
-		btnExit.setBounds(1150,0,43,43);
+		btnExit.setBackground(colorSecond);
+		btnExit.setBounds(1157,0,43,43);
 		btnExit.setBorderPainted(false);
 		btnExit.setMargin(new Insets(1, 1, 1, 1));;
 		btnExit.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -79,15 +77,22 @@ public class WindowMain extends JFrame {
 		
 		contentData = new JPanel();
 		contentData.setBounds(0,43,1200,637);
-		contentPane.add(contentData);
 		contentData.setLayout(null);
+		contentPane.add(contentData);
 	}
 	//Metodo para iniciar componente del Login
 	public void initLoginPanel() {
 		loginPanel = new LoginPanel(listener);
 		loginPanel.setSize(1200, 635);
-		loginPanel.setLocation(0, 43);
+		loginPanel.setLocation(0, 0);
 		showPanel(contentData, loginPanel);
+	}
+	/**
+	 * Metodo para iniciar panel de registro de nuevo usuario
+	 */
+	public void initRegisterPanel() {
+		registerPanel = new RegisterPanel(listener);
+		showPanel(contentData, registerPanel);
 	}
 	/**Metodo que inicia la interfaz de usuario (Menu y un panel lateral para el contenido)
 	*Este metodo se debe llamar siempre el login sea exitoso.

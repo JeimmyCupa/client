@@ -11,6 +11,7 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Insets;
@@ -25,6 +26,7 @@ public class WindowMain extends JFrame {
 	private JPanel contentPane;//Panel principal de la ventana
 	private JPanel contentData,header,menuPanel,dataPanel;//Paneles para dividir el contenido en la ventana
 	private JButton btnExit;
+	private JLabel prueba;
 	
 	private LoginPanel loginPanel;
 	private RegisterPanel registerPanel;
